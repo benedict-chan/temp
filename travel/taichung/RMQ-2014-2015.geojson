@@ -1,0 +1,375 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.60110699999996,
+                    24.254972,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Taichung Airport",
+                "styleUrl": "#icon-503-F4EB37",
+                "styleHash": "46b6e245"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.680656,
+                    24.137477,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "成旅晶贊飯店",
+                "styleUrl": "#icon-503-DB4436",
+                "styleHash": "328c7205",
+                "description": "成旅晶贊飯店。台中民權台中火車站商店電話:04-2223-5678商店傳真:04-2223-0505商店地址:400 台中市 中區 民權路 66 號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.64396169999998,
+                    24.1753441,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "台中逢甲商旅",
+                "styleUrl": "#icon-503-DB4436",
+                "styleHash": "328c7205",
+                "description": "台中市西屯區西屯路二段 275-2 號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.61553090000007,
+                    24.1129508,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "高鐵台中站",
+                "styleUrl": "#icon-503-F4EB37",
+                "styleHash": "46b6e245",
+                "description": "台中市烏日區站區二路8號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.68495000000009,
+                    24.149067,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "一中街商圈出入口",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "台中市北區一中街116巷25號1樓\n營業時間：11：00-23：00（各店家營業時間不同）"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.64645100000007,
+                    24.17992,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "逢甲夜市商圏",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "台中市西屯區文華路\n營業時間：17:00~24:00"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.59260799999994,
+                    24.181501,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "東海夜市",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "比較分散\n台中市龍井區新興路一巷"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.65580599999998,
+                    24.156186,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "精明一街商圈大墩十九街出入口",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.68069300000002,
+                    24.129126,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "忠孝夜市",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "台中市南區忠孝路"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.674915,
+                    24.14337,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "中華夜市",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "台中市中區中華路一段"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.71919500000001,
+                    24.251527,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "豐原廟東夜市",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "台中市豐原區中正路167巷"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.70030099999997,
+                    24.133298,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "旱渓夜市",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "台中市東區旱溪東路一段與振興路口\n每週二、五、六晚上６點至凌晨１２點"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.00952299999994,
+                    24.836097,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "悅豪大飯店(Yuhao Hotel)",
+                "styleUrl": "#icon-503-DB4436",
+                "styleHash": "328c7205"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.04041499999994,
+                    24.80806,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "高鐡新竹站",
+                "styleUrl": "#icon-503-F4EB37",
+                "styleHash": "46b6e245",
+                "description": "新竹縣竹北市高鐵七路6號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.97949800000004,
+                    24.801071,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "新竹市立動物園",
+                "styleUrl": "#icon-503-FAD199",
+                "styleHash": "-3477199b",
+                "description": "新竹市公園路279號電話：（03）522-2194營業時間：8:30-17:00公休日：每週一（國定假日除外）"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.96556499999998,
+                    24.80456,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "城隍廟夜市",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.970237,
+                    24.8042,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "新竹東門城(迎曦門)",
+                "styleUrl": "#icon-503-FAD199",
+                "styleHash": "-3477199b",
+                "description": "新竹市東區東門圓環"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.99826899999992,
+                    24.796522,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "清大夜市",
+                "styleUrl": "#icon-503-F8971B",
+                "styleHash": "-65e436fb",
+                "description": "300 新竹市新竹市建功ㄧ路5巷5-19號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.535934,
+                    25.040686,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "玫瑰精品會館 -- 敦南館",
+                "styleUrl": "#icon-503-DB4436",
+                "styleHash": "328c7205",
+                "description": "臺北市大安區新生南路一段 103 巷 37 號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.53727100000005,
+                    25.058721,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "比堤商旅 - 建北館",
+                "styleUrl": "#icon-503-DB4436",
+                "styleHash": "328c7205",
+                "description": "台北市中山區建國北路二段 93 號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.51708099999996,
+                    25.047924,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "高鐵台北站",
+                "styleUrl": "#icon-503-F4EB37",
+                "styleHash": "46b6e245",
+                "description": "台北市北平西路3號"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    121.55959400000008,
+                    25.084126,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "伍角船板餐廳",
+                "styleUrl": "#icon-503-FAD199",
+                "styleHash": "-3477199b",
+                "description": "104台北市中山區內湖路一段32巷8號\n11:00–14:00\n17:00–21:00"
+            }
+        }
+    ]
+}
