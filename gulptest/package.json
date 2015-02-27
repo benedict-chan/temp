@@ -10,5 +10,8 @@
     "gulp"
   ],
   "author": "Benedict Chan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
 }
