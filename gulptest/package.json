@@ -1,0 +1,14 @@
+{
+  "name": "gulptest",
+  "version": "1.0.0",
+  "description": "Just to test gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Benedict Chan",
+  "license": "ISC"
+}
