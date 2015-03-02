@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var del = require('del');
@@ -24,7 +25,8 @@ gulp.task('concat:scripts', ['clean:scripts'], function(){
 	return gulp.src(paths.scripts, {base: source_root})
 	.pipe(concat('all.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('./build/js'));
+	.pipe(gulp.dest('./build/js'))
+	.on('error', gutil.log);
 });
 
 gulp.task('default', ['concat:scripts']);
