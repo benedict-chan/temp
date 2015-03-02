@@ -1,11 +1,28 @@
 var gulp = require('gulp');
+var concat = require('gulp-concat');
 var del = require('del');
 
 
-gulp.task('clean', function(cb){
+var source_root = 'source';
+var paths = {
+	scripts: [
+		source_root + '\\js\\' + 'jquery.waypoints.min.js',
+		source_root + '\\js\\' +'bootstrap.min.js',
+		source_root + '\\js\\' +'d3.min.js',
+		]
+};
+
+
+gulp.task('clean:scripts', function(cb){
 	del([
 		'build'
 		], cb);
 });
 
-gulp.task('default', ['clean']);
+gulp.task('concat:scripts', ['clean:scripts'], function(){
+	return gulp.src(paths.scripts)
+	.pipe(concat('all.js'))
+	.pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('default', ['concat:scripts']);
