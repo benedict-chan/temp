@@ -12,6 +12,7 @@
   "author": "Benedict Chan",
   "license": "ISC",
   "devDependencies": {
+    "del": "^1.1.1",
     "gulp": "^3.8.11"
   }
 }

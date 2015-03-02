@@ -1,5 +1,11 @@
 var gulp = require('gulp');
+var del = require('del');
 
-gulp.task('default', function(){
-	console.info('Yo, something is running!');
+
+gulp.task('clean', function(cb){
+	del([
+		'build'
+		], cb);
 });
+
+gulp.task('default', ['clean']);
