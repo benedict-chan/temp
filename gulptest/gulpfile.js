@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var del = require('del');
 
 
@@ -22,6 +23,7 @@ gulp.task('clean:scripts', function(cb){
 gulp.task('concat:scripts', ['clean:scripts'], function(){
 	return gulp.src(paths.scripts, {base: source_root})
 	.pipe(concat('all.js'))
+	.pipe(uglify())
 	.pipe(gulp.dest('./build/js'));
 });
 
