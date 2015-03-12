@@ -14,10 +14,29 @@ var dest_root = 'build/';
 
 var paths = {
 	scripts: [
-		source_root + 'js/jquery.waypoints.min.js',
-		source_root + 'js/bootstrap.min.js',
-		source_root + 'js/d3.min.js',
+		source_root + 'plugins/aqua-page-builder/assets/javascripts/aqpb-view.js',
+		source_root + 'plugins/purethemes-shortcodes/js/shortcodes.js',
+
+		source_root + 'themes/tz-astrum/js/jquery.waypoints.min.js',
+		source_root + 'themes/tz-astrum/js/d3.min.js',
+		source_root + 'themes/tz-astrum/js/bootstrap.min.js',
+
+		source_root + 'themes/astrum-theme/js/jquery.easing.min.js',
+		source_root + 'themes/astrum-theme/js/jquery.themepunch.plugins.min.js',
+		source_root + 'themes/astrum-theme/js/jquery.themepunch.showbizpro.min.js',
+		source_root + 'themes/astrum-theme/js/jquery.tooltips.min.js',
+		source_root + 'themes/astrum-theme/js/jquery.magnific-popup.min.js',
+		source_root + 'themes/astrum-theme/js/jquery.superfish.js',
+		source_root + 'themes/astrum-theme/js/jquery.twitter.js',
+		source_root + 'themes/astrum-theme/js/jquery.flexslider.js',
+		source_root + 'themes/astrum-theme/js/jquery.jpanelmenu.js',
+		source_root + 'themes/astrum-theme/js/jquery.isotope.min.js',
+
+		source_root + 'themes/astrum-theme/js/custom.js',
+
 		],
+
+
 	styles_noncustom: [
 		source_root + 'plugins/aqua-page-builder/assets/stylesheets/aqpb-view.css',
 		source_root + 'plugins/purethemes-shortcodes/css/shortcodes.css',
@@ -57,10 +76,10 @@ gulp.task('clean:css', function(cb){
 
 gulp.task('concat:scripts', ['clean:js'], function(){
 	return gulp.src(paths.scripts, {base: source_root})
-	.pipe(concat('all.js'))
+	.pipe(concat('noncustom.js'))
 	.pipe(gulp.dest(dest_root + '/js'))
 	.pipe(uglify())
-	.pipe(rename('all.min.js'))
+	.pipe(rename('noncustom.min.js'))
 	.pipe(gulp.dest(dest_root + '/js'))
 	.on('error', gutil.log);
 });
@@ -95,5 +114,6 @@ gulp.task('watch:css', function(){
 
 gulp.task('yo', function(){console.info('yo');});
 
-gulp.task('default', ['concat-noncustom:css', 'concat-custom:css']);
+//gulp.task('default', ['concat-noncustom:css', 'concat-custom:css', 'concat:scripts']);
+gulp.task('default', [ 'concat:scripts']);
 
