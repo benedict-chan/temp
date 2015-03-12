@@ -10,6 +10,8 @@ var del = require('del');
 
 
 var source_root = 'source/';
+var dest_root = 'build/';
+
 var paths = {
 	scripts: [
 		source_root + 'js/jquery.waypoints.min.js',
@@ -25,23 +27,23 @@ var paths = {
 
 gulp.task('clean:js', function(cb){
 	del([
-		'build/js/**'
+		dest_root + 'js/**'
 		], cb);
 });
 
 gulp.task('clean:css', function(cb){
 	del([
-		'build/*.css'
+		dest_root + '*.css'
 		], cb);
 });
 
 gulp.task('concat:scripts', ['clean:js'], function(){
 	return gulp.src(paths.scripts, {base: source_root})
 	.pipe(concat('all.js'))
-	.pipe(gulp.dest('./build/js'))
+	.pipe(gulp.dest(dest_root + '/js'))
 	.pipe(uglify())
 	.pipe(rename('all.min.js'))
-	.pipe(gulp.dest('./build/js'))
+	.pipe(gulp.dest(dest_root + '/js'))
 	.on('error', gutil.log);
 });
 
@@ -49,10 +51,10 @@ gulp.task('concat:scripts', ['clean:js'], function(){
 gulp.task('concat:css', ['clean:css'], function(){
 	return gulp.src(paths.styles, {base: source_root})
 	.pipe(concat('style.css'))
-	.pipe(gulp.dest('./build/'))
+	.pipe(gulp.dest(dest_root  + '/css'))
 	.pipe(minifyCSS())
 	.pipe(rename('style.min.css'))
-	.pipe(gulp.dest('./build/'))
+	.pipe(gulp.dest(dest_root + '/css'))
 	.on('error', gutil.log);
 });
 
@@ -64,5 +66,5 @@ gulp.task('watch:css', function(){
 
 gulp.task('yo', function(){console.info('yo');});
 
-gulp.task('default', ['concat:scripts', 'concat:css', 'watch:css']);
+gulp.task('default', ['concat:scripts', 'concat:css']);
 
