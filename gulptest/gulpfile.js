@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var watch = require('gulp-watch');
@@ -22,8 +23,8 @@ var paths = {
 		source_root + 'themes/tz-astrum/js/bootstrap.min.js',
 
 		source_root + 'themes/astrum-theme/js/jquery.easing.min.js',
-		source_root + 'themes/astrum-theme/js/jquery.themepunch.plugins.min.js',
-		source_root + 'themes/astrum-theme/js/jquery.themepunch.showbizpro.min.js',
+		// source_root + 'themes/astrum-theme/js/jquery.themepunch.plugins.min.js',
+		// source_root + 'themes/astrum-theme/js/jquery.themepunch.showbizpro.min.js',
 		source_root + 'themes/astrum-theme/js/jquery.tooltips.min.js',
 		source_root + 'themes/astrum-theme/js/jquery.magnific-popup.min.js',
 		source_root + 'themes/astrum-theme/js/jquery.superfish.js',
@@ -32,7 +33,7 @@ var paths = {
 		source_root + 'themes/astrum-theme/js/jquery.jpanelmenu.js',
 		source_root + 'themes/astrum-theme/js/jquery.isotope.min.js',
 
-		source_root + 'themes/astrum-theme/js/custom.js',
+		// source_root + 'themes/astrum-theme/js/custom.js',
 
 		],
 
@@ -48,7 +49,7 @@ var paths = {
 		source_root + 'themes/astrum-theme/css/base.css',
 		source_root + 'themes/astrum-theme/css/responsive.css',
 		source_root + 'themes/astrum-theme/css/icons.css',
-		// source_root + 'themes/astrum-theme/style.css',
+		// source_root + 'themes/astrum-theme/style.css',  //can't use it here, all relative path will fail
 
 		source_root + 'themes/astrum-theme/css/woocommerce.css',
 
@@ -76,12 +77,14 @@ gulp.task('clean:css', function(cb){
 
 gulp.task('concat:scripts', ['clean:js'], function(){
 	return gulp.src(paths.scripts, {base: source_root})
-	.pipe(concat('noncustom.js'))
-	.pipe(gulp.dest(dest_root + '/js'))
-	.pipe(uglify())
-	.pipe(rename('noncustom.min.js'))
-	.pipe(gulp.dest(dest_root + '/js'))
-	.on('error', gutil.log);
+			// .pipe(jshint())
+   //    		.pipe(jshint.reporter('default'))
+			.pipe(concat('noncustom.js'))
+			.pipe(gulp.dest(dest_root + '/js'))
+			.pipe(uglify())
+			.pipe(rename('noncustom.min.js'))
+			.pipe(gulp.dest(dest_root + '/js'))
+			.on('error', gutil.log);
 });
 
 
@@ -114,6 +117,6 @@ gulp.task('watch:css', function(){
 
 gulp.task('yo', function(){console.info('yo');});
 
-//gulp.task('default', ['concat-noncustom:css', 'concat-custom:css', 'concat:scripts']);
-gulp.task('default', [ 'concat:scripts']);
+gulp.task('default', ['concat-noncustom:css', 'concat-custom:css', 'concat:scripts']);
+// gulp.task('default', [ 'concat:scripts']);
 
