@@ -1,3 +1,19 @@
+
+/*
+1. Load page and get upc
+2. Go to this page
+3. Run this in command
+http://www.nikestore.com.hk/shoppingcart/
+
+upc_your_size = "";
+$j.post("/shoppingcart/add", {upc: upc_your_size, count: 1}, function(j) {
+    var n = j.shoppingCommand;
+    console.dir(n);
+    omnitureCartAddedHandler("768861-601", "1249");
+});
+
+
+*/
 $j.post("/shoppingcart/add", {upc: "00659658169586",count: 1}, function(j) {
     var n = j.shoppingCommand;
     console.dir(n);

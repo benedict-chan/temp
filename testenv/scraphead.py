@@ -10,13 +10,24 @@ import re
 import traceback
 
 
+GMAIL_USERNAME = ""
+GMAIL_PASSWORD = ""
+
 SPECIAL_MSG = """
 <br />
-$j.post("/shoppingcart/add", {upc: "00659658169586",count: 1}, function(j) { <br />
+<br />
+In case you need to add it to the shopping cart manually
+<br />
+http://www.nikestore.com.hk/shoppingcart
+<br />
+<br />
+$j.post("/shoppingcart/add", {upc: "xxxxxxx",count: 1}, function(j) { <br />
     var n = j.shoppingCommand;    <br />
     console.dir(n);   <br />
-    omnitureCartAddedHandler("768929-623", "1299");   <br />
 });  <br />
+<br />
+<br />
+<br />
 <br />
 """
 
@@ -40,19 +51,24 @@ def send_simple_email(recipient, email_subject, body_of_email):
 #skuCodeDialog = "768929-623"
 def keep_request_page():
 	print 'Requesting: %s' % datetime.datetime.now()
-	skuCodeDialog = "768861-601"
-	url = "http://www.nikestore.com.hk/product/%s/detail.htm?pdpRecommend=false&preSkuCode=" % skuCodeDialog
+	#skuCodeDialog = "768861-601"
+	#url = "http://www.nikestore.com.hk/product/%s/detail.htm?pdpRecommend=false&preSkuCode=" % skuCodeDialog
+	url = "http://www.nikestore.com.hk/product/fair/WT7vXzY9.htm?pdpRecommend=false&preSkuCode="
 	resp = requests.get(url=url, allow_redirects=False)
 	if resp.status_code == 200:
 		print 'Exists!!'
+		has_upc = False
 		body = url
-		body = body + SPECIAL_MSG
 		try:
 			tree = lxml.html.fromstring(resp.text)
 			for li in tree.cssselect(".select-box-size li"):
+				has_upc = True
 				size = re.sub(r'\W+', '', li.text_content())
 				upc = li.attrib["currupc"]
-				new_item = "<br /> Size %s, upc code: %s <br />" % (size, upc)
+				if size == "95":
+					new_item = "<br /> Size %s, upc code: <span style='color: #ff0000'> %s </span> <br />" % (size, upc)
+				else:
+					new_item = "<br /> Size %s, upc code: %s <br />" % (size, upc)
 				body = body + new_item
 				pass
 		except Exception, e:
@@ -63,9 +79,14 @@ def keep_request_page():
 			traceback.print_exc()
 		finally:
 			pass
-		send_simple_email("", "nikestore", body)
-		print body
-		return False
+		body = body + SPECIAL_MSG
+		if has_upc:
+			send_simple_email("", "Your Nike's Link", body)
+			#send_simple_email("", "Your Nike's Link", body)
+			print body
+			return False
+		else:
+			return True
 		pass
 	else:
 		print 'Not exists'
@@ -76,12 +97,12 @@ def keep_request_page():
 
 
 def start_process():
-	counter = 12 #loop for 1 minute * 60 * 17 hours
+	counter = 10 #loop for 5 minute * 12 * 64 hours
 	keep_request = True
 	while keep_request and counter > 0:
 		keep_request = keep_request_page()
 		counter = counter - 1
-		time.sleep(5) #sleep for 60 seconds
+		time.sleep(600) #sleep for 60 seconds
 		print 'Still have %s times to go' % counter
 		sys.stdout.flush()
 	pass
